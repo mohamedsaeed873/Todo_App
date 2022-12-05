@@ -1,0 +1,16 @@
+<h3>TodoApp</h3>
+
+<form method="Post" action="/">
+    {% csrf_token %}
+{{form.title}}
+<input type="submit" name="Create Task">
+</form>
+
+{% for task in tasks %}
+<div>
+<p>
+    {{task}}
+</p>
+</div>
+
+{% endfor %}
